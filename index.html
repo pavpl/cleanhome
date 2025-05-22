@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanHome - Профессиональная уборка</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaeef1] px-10 py-3">
+                <div class="flex items-center gap-4 text-[#101518]">
+                    <a href="index.html" class="size-4 block">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z"
+                                fill="currentColor"
+                            ></path>
+                        </svg>
+                    </a>
+                    <h2 class="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">CleanHome</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <div class="flex items-center gap-9">
+                        <a class="text-[#101518] text-sm font-medium leading-normal" href="about.html">О нас</a>
+                        <a class="text-[#101518] text-sm font-medium leading-normal" href="404.html">Услуги</a>
+                        <a class="text-[#101518] text-sm font-medium leading-normal" href="404.html">Отзывы</a>
+                        <a class="text-[#101518] text-sm font-medium leading-normal" href="contacts.html">Контакты</a>
+                    </div>
+                    <button
+                        onclick="openOrderModal()"
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#b2d1e5] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em]"
+                    >
+                        <span class="truncate">Заказать</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div
+                                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMdNVOFkZWt966H4uXHHyrDIedtwJYCceXiBvlEHk-bR7VWXl0cKXjQ-Jp-sjjjXV7Hnlnn1-DioP-oOsLfu7I0e8wgZSVCsy4AKqz57gw3Xt3ANFxU1b5q2ghodpgPs4B8zeBMVzYI8qrDbraopAILO1s8wX1_TWBalhNc6ZO2Kbk6Mw_ZBKrrDn35y887yaezQ-3Qiykh0AsOd2dlewk7y6kzYEZA39oOXuaitsWsJocqmCA7KHw4yoyCq9E4tvoKOCqNk8x-ayN");'
+                            >
+                                <div class="flex flex-col gap-2 text-left">
+                                    <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                        Профессиональные услуги по уборке вашего дома
+                                    </h1>
+                                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                        Ощутите радость безупречно чистого дома с нашими экспертными решениями по уборке. Мы предлагаем ряд услуг, адаптированных к вашим потребностям, обеспечивая чистое и здоровое жилое пространство.
+                                    </h2>
+                                </div>
+                                <button
+                                    onclick="openOrderModal()"
+                                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#b2d1e5] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                                >
+                                    <span class="truncate">Получить бесплатную смету</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="orderModal" class="order-modal" style="display:none;">
+                        <div class="order-modal-content">
+                            <span class="close-modal" onclick="closeOrderModal()">&times;</span>
+                            <form id="orderForm" class="order-form">
+                                <h2>Закажите клининг прямо сейчас</h2>
+                                
+                                <div class="form-section">
+                                    <h3>Контактные данные</h3>
+                                    <div class="form-group">
+                                        <label for="name">Ваше имя:</label>
+                                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Телефон:</label>
+                                        <input type="tel" id="phone" name="phone" required placeholder="+38 (___) ___-__-__">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Информация об объекте</h3>
+                                    <div class="form-group">
+                                        <label for="address">Адрес:</label>
+                                        <input type="text" id="address" name="address" required placeholder="Введите адрес">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="rooms">Количество комнат:</label>
+                                        <div class="number-input">
+                                            <button type="button" class="number-btn minus">-</button>
+                                            <input type="number" id="rooms" name="rooms" value="1" min="1" max="10">
+                                            <button type="button" class="number-btn plus">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="area">Площадь (м²):</label>
+                                        <input type="number" id="area" name="area" required min="1" placeholder="Введите площадь">
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Выбор услуги</h3>
+                                    <div class="form-group">
+                                        <label for="service">Тип уборки:</label>
+                                        <select id="service" name="service" required>
+                                            <option value="">Выберите тип уборки</option>
+                                            <option value="full">Полная уборка</option>
+                                            <option value="dry">Химчистка</option>
+                                            <option value="light">Лайт версия</option>
+                                            <option value="fullpack">Полный пак</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Частота уборки:</label>
+                                        <div class="radio-group">
+                                            <label class="radio-label">
+                                                <input type="radio" name="frequency" value="once" checked>
+                                                <span>Единоразово</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="frequency" value="weekly">
+                                                <span>Раз в неделю <span class="discount">-15%</span></span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="frequency" value="biweekly">
+                                                <span>Раз в 2 недели <span class="discount">-10%</span></span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="frequency" value="monthly">
+                                                <span>Раз в месяц <span class="discount">-5%</span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Дата и время</h3>
+                                    <div class="form-group">
+                                        <label for="date">Выберите дату:</label>
+                                        <input type="date" id="date" name="date" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Выберите время:</label>
+                                        <div class="time-slots">
+                                            <select id="timeStart" name="timeStart" required>
+                                                <option value="">С</option>
+                                                <option value="09:00">09:00</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                            </select>
+                                            <span>—</span>
+                                            <select id="timeEnd" name="timeEnd" required>
+                                                <option value="">До</option>
+                                                <option value="10:00">10:00</option>
+                                                <option value="11:00">11:00</option>
+                                                <option value="12:00">12:00</option>
+                                                <option value="13:00">13:00</option>
+                                                <option value="14:00">14:00</option>
+                                                <option value="15:00">15:00</option>
+                                                <option value="16:00">16:00</option>
+                                                <option value="17:00">17:00</option>
+                                                <option value="18:00">18:00</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="comments">Дополнительные пожелания:</label>
+                                    <textarea id="comments" name="comments" rows="3" placeholder="Опишите дополнительные требования к уборке"></textarea>
+                                </div>
+
+                                <button type="submit" class="order-btn">Заказать уборку</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <section id="reviews" class="reviews-section">
+                        <h2 class="text-[#101518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Отзывы наших клиентов</h2>
+                        <div class="reviews-container">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://via.placeholder.com/50" alt="Аватар" class="review-avatar">
+                                    <div class="review-info">
+                                        <h3>Анна К.</h3>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p class="review-text">Отличный сервис! Быстро, качественно и профессионально. Обязательно закажу еще раз.</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://via.placeholder.com/50" alt="Аватар" class="review-avatar">
+                                    <div class="review-info">
+                                        <h3>Михаил П.</h3>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p class="review-text">Очень доволен результатом. Ребята работают на совесть, все чисто и аккуратно.</p>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="https://via.placeholder.com/50" alt="Аватар" class="review-avatar">
+                                    <div class="review-info">
+                                        <h3>Елена С.</h3>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                </div>
+                                <p class="review-text">Заказывала уборку после ремонта. Все отлично, даже не ожидала такого результата!</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <footer class="flex justify-center">
+                <div class="flex max-w-[960px] flex-1 flex-col">
+                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+                        <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                            <a class="text-[#5c778a] text-base font-normal leading-normal min-w-40" href="about.html">О нас</a>
+                            <a class="text-[#5c778a] text-base font-normal leading-normal min-w-40" href="#services">Услуги</a>
+                            <a class="text-[#5c778a] text-base font-normal leading-normal min-w-40" href="#reviews">Отзывы</a>
+                            <a class="text-[#5c778a] text-base font-normal leading-normal min-w-40" href="contacts.html">Контакты</a>
+                        </div>
+                        <p class="text-[#5c778a] text-base font-normal leading-normal">© 2024 CleanHome. Все права защищены.</p>
+                    </footer>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | CleanHome</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <div class="flex flex-wrap justify-between gap-3 p-4">
+                        <div class="flex min-w-72 flex-col gap-3">
+                            <p class="text-[#101518] tracking-light text-[32px] font-bold leading-tight">Панель управления</p>
+                            <p class="text-[#5c778a] text-sm font-normal leading-normal">Управление заказами и статистика</p>
+                        </div>
+                    </div>
+
+                    <section id="stats" class="admin-stats">
+                        <div class="stat-card pink">
+                            <div class="stat-title">Заказы</div>
+                            <div class="stat-value" id="stat-orders">0</div>
+                        </div>
+                        <div class="stat-card purple">
+                            <div class="stat-title">Выручка</div>
+                            <div class="stat-value" id="stat-revenue">0 грн</div>
+                        </div>
+                        <div class="stat-card blue">
+                            <div class="stat-title">Пользователи</div>
+                            <div class="stat-value" id="stat-users">0</div>
+                        </div>
+                    </section>
+
+                    <section id="orders" class="orders-section">
+                        <div class="tabs">
+                            <button class="tab-btn active" onclick="showTab('active')">Активные</button>
+                            <button class="tab-btn" onclick="showTab('archive')">Архив</button>
+                            <button class="tab-btn" onclick="showTab('messages')">Сообщения</button>
+                        </div>
+                        <div class="px-4 py-3 @container">
+                            <div class="flex overflow-hidden rounded-lg border border-[#d4dde2] bg-gray-50">
+                                <table class="flex-1" id="ordersTable">
+                                    <thead id="ordersThead">
+                                        <tr class="bg-gray-50">
+                                            <th class="px-4 py-3 text-left text-[#101518] w-[400px] text-sm font-medium leading-normal">ID заказа</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-[400px] text-sm font-medium leading-normal">Клиент</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-[400px] text-sm font-medium leading-normal">Адрес</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-[400px] text-sm font-medium leading-normal">Дата и время</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-[400px] text-sm font-medium leading-normal">Тип услуги</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-60 text-sm font-medium leading-normal">Статус</th>
+                                            <th class="px-4 py-3 text-left text-[#101518] w-60 text-sm font-medium leading-normal">Действия</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ordersList">
+                                        <!-- Заказы будут добавлены через JavaScript -->
+                                    </tbody>
+                                </table>
+                                <div id="messagesList" style="display:none;width:100%;padding:24px;"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="orderModalDetails" style="display:none;position:fixed;z-index:1000;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.25);align-items:center;justify-content:center;">
+        <div id="orderModalDetailsContent" style="background:#fff;padding:32px 24px;border-radius:16px;min-width:320px;max-width:90vw;max-height:90vh;overflow:auto;box-shadow:0 4px 32px rgba(0,0,0,0.12);"></div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html> 

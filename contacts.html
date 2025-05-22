@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7eef3] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#0e161b]">
+            <a href="index.html" class="size-4 block">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.8261 17.4264C16.7203 18.1174 20.2244 18.5217 24 18.5217C27.7756 18.5217 31.2797 18.1174 34.1739 17.4264C36.9144 16.7722 39.9967 15.2331 41.3563 14.1648L24.8486 40.6391C24.4571 41.267 23.5429 41.267 23.1514 40.6391L6.64374 14.1648C8.00331 15.2331 11.0856 16.7722 13.8261 17.4264Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+            <h2 class="text-[#0e161b] text-lg font-bold leading-tight tracking-[-0.015em]">CleanHome</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="404.html">Услуги</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="about.html">О нас</a>
+              <a class="text-[#0e161b] text-sm font-medium leading-normal" href="contacts.html">Контакты</a>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#1993e5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Заказать уборку</span>
+            </button>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#0e161b] tracking-light text-[32px] font-bold leading-tight min-w-72">Контакты</p></div>
+            <p class="text-[#0e161b] text-base font-normal leading-normal pb-3 pt-1 px-4">Наш адрес: г. Одесса, ул. Королева, д. 10, оф. 205</p>
+            <p class="text-[#0e161b] text-base font-normal leading-normal pb-3 pt-1 px-4">Телефон: +38 (067) 123-45-67</p>
+            <p class="text-[#0e161b] text-base font-normal leading-normal pb-3 pt-1 px-4">Email:  info@uborka.ua</p>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0e161b] text-base font-medium leading-normal pb-2">Имя</p>
+                <input
+                  id="contactName"
+                  placeholder="Введите ваше имя"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0e161b] focus:outline-0 focus:ring-0 border border-[#d0dee7] bg-slate-50 focus:border-[#d0dee7] h-14 placeholder:text-[#4e7a97] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0e161b] text-base font-medium leading-normal pb-2">Email</p>
+                <input
+                  id="contactEmail"
+                  placeholder="Введите ваш email"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0e161b] focus:outline-0 focus:ring-0 border border-[#d0dee7] bg-slate-50 focus:border-[#d0dee7] h-14 placeholder:text-[#4e7a97] p-[15px] text-base font-normal leading-normal"
+                  value=""
+                />
+              </label>
+            </div>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <p class="text-[#0e161b] text-base font-medium leading-normal pb-2">Сообщение</p>
+                <textarea
+                  id="contactMessage"
+                  placeholder="Введите сообщение"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#0e161b] focus:outline-0 focus:ring-0 border border-[#d0dee7] bg-slate-50 focus:border-[#d0dee7] min-h-36 placeholder:text-[#4e7a97] p-[15px] text-base font-normal leading-normal"
+                ></textarea>
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-start">
+              <button
+                id="sendContactBtn"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#1993e5] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Отправить</span>
+              </button>
+              <span id="contactSuccess" style="display:none;color:#388e3c;margin-left:16px;font-weight:500;">Сообщение отправлено!</span>
+            </div>
+            <div class="flex px-4 py-3">
+              <iframe
+                width="100%"
+                height="350"
+                frameborder="0"
+                style="border:0; border-radius: 16px; min-height: 300px;"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=30.71061%2C46.38412%2C30.74069%2C46.40052&amp;layer=mapnik&amp;marker=46.391634%2C30.722612"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <p class="text-[#4e7a97] text-base font-normal leading-normal">© 2023 CleanHome. Все права защищены.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+    document.getElementById('sendContactBtn').onclick = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+      if (!name || !email || !message) {
+        alert('Пожалуйста, заполните все поля!');
+        return;
+      }
+      const messages = JSON.parse(localStorage.getItem('messages') || '[]');
+      messages.push({
+        id: Date.now(),
+        name,
+        email,
+        message,
+        date: new Date().toISOString(),
+        status: 'new'
+      });
+      localStorage.setItem('messages', JSON.stringify(messages));
+      document.getElementById('contactName').value = '';
+      document.getElementById('contactEmail').value = '';
+      document.getElementById('contactMessage').value = '';
+      document.getElementById('contactSuccess').style.display = 'inline';
+      setTimeout(()=>{
+        document.getElementById('contactSuccess').style.display = 'none';
+      }, 2500);
+    };
+    </script>
+  </body>
+</html>

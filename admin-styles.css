@@ -1,0 +1,433 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f7f7;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 48px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ecc40;
+    letter-spacing: 2px;
+}
+.main-nav a {
+    margin-left: 32px;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.main-nav a:hover {
+    color: #2ecc40;
+}
+
+.hero-section {
+    position: relative;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    filter: brightness(0.6);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+}
+.hero-btn {
+    display: inline-block;
+    background: #2ecc40;
+    color: #fff;
+    padding: 16px 38px;
+    border-radius: 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(46,204,64,0.15);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.hero-btn:hover {
+    background: #27ae3a;
+    box-shadow: 0 6px 24px rgba(46,204,64,0.22);
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(30,144,255,0.07);
+    padding: 0 40px;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.admin-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e90ff;
+    letter-spacing: 2px;
+}
+.admin-search input {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e1e1e1;
+    font-size: 16px;
+    background: #f8f9fa;
+    outline: none;
+    width: 200px;
+    transition: border 0.2s;
+}
+.admin-search input:focus {
+    border: 1.5px solid #1e90ff;
+}
+.admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 20px;
+}
+.admin-actions .lang {
+    font-size: 15px;
+    color: #1e90ff;
+    font-weight: 600;
+}
+.admin-actions .notif {
+    position: relative;
+    cursor: pointer;
+}
+.admin-actions .notif-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    background: #ff4d6d;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: inline-block;
+}
+.admin-actions .profile {
+    font-size: 22px;
+    color: #6c63ff;
+}
+
+.admin-main {
+    max-width: 1300px;
+    margin: 30px auto 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.stat-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+.stat-card.pink {
+    border-left: 4px solid #FF69B4;
+}
+.stat-card.purple {
+    border-left: 4px solid #9370DB;
+}
+.stat-card.blue {
+    border-left: 4px solid #4169E1;
+}
+.stat-title {
+    color: #5c778a;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+.stat-value {
+    color: #101518;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.admin-charts {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.chart-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(30,144,255,0.07);
+    padding: 24px 20px 10px 20px;
+    flex: 1;
+    min-width: 320px;
+    min-height: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orders-section {
+    background: white;
+    border-radius: 0.75rem;
+    margin: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.orders-section h2 {
+    margin-bottom: 24px;
+    color: #1e90ff;
+    font-size: 24px;
+}
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.order-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(30,144,255,0.05);
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.order-header h3 {
+    color: #1e90ff;
+    margin: 0;
+    font-size: 20px;
+}
+.order-date {
+    color: #888;
+    font-size: 14px;
+}
+.order-content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.order-section {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 1px 3px rgba(30,144,255,0.04);
+    padding: 12px 16px;
+    min-width: 220px;
+    flex: 1;
+}
+.order-section h4 {
+    color: #1e90ff;
+    margin: 0 0 8px 0;
+    font-size: 15px;
+}
+.order-section p {
+    margin: 4px 0;
+    color: #333;
+    font-size: 15px;
+}
+.order-section strong {
+    color: #666;
+}
+.order-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.order-actions button {
+    padding: 7px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.complete-btn {
+    background-color: #28a745;
+    color: white;
+}
+.complete-btn:hover {
+    background-color: #218838;
+}
+.archive-btn, .restore-btn {
+    background-color: #ffc107;
+    color: black;
+}
+.archive-btn:hover, .restore-btn:hover {
+    background-color: #e0a800;
+}
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eaeef1;
+}
+.tab-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: #5c778a;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tab-btn:hover {
+    background: #f8f9fa;
+}
+.tab-btn.active {
+    background: #eaeef1;
+    color: #101518;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eaeef1;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 220px;
+}
+th {
+    background: #f8f9fa;
+    font-weight: 500;
+}
+tr:hover {
+    background: #f8f9fa;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.status-new {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+.status-in-progress {
+    background: #fff3e0;
+    color: #f57c00;
+}
+.status-completed {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+.status-cancelled {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+@media (max-width: 1100px) {
+    .admin-stats, .admin-charts {
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+@media (max-width: 700px) {
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 18px 10px;
+        gap: 10px;
+    }
+    .admin-main {
+        padding: 0 5px 30px 5px;
+    }
+    .orders-section {
+        padding: 16px 5px;
+    }
+    .order-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+    .orders-section {
+        margin: 0.5rem;
+        overflow-x: auto;
+    }
+    table {
+        min-width: 800px;
+    }
+}
+@media (max-width: 900px) {
+    th, td {
+        max-width: 120px;
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+    .orders-section {
+        font-size: 13px;
+    }
+}
+
+/* Кнопки действий в таблице */
+.orders-section td button, .orders-section td .tab-btn {
+    margin-bottom: 4px;
+    min-width: 70px;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 13px;
+}
+
+.orders-section td {
+    vertical-align: middle;
+} 
